@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<p id="2"></p>
+<script>
+    class Apple {
+        weight;
+
+        constructor(weight) {
+            this.weight = weight
+        }
+
+        decrease() {
+            this.weight--
+        }
+
+        isEmpty() {
+            if (this.weight > 0) {
+                return true
+            }
+            return false
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight
+        }
+
+        say(str) {
+            alert(str)
+        }
+
+        eat(apple) {
+            if(apple.weight>0){
+            apple.weight--}
+            this.weight++
+        }
+
+        checkApple(apple) {
+            var isEmpty = apple.isEmpty()
+            return isEmpty
+        }
+    }
+
+    var Quatao = new Apple(66)
+    var human = new Human("duyet", "nam", "65kg")
+
+    function anTao() {
+        human.eat(Quatao);
+        document.getElementById("result").innerHTML = Quatao.weight;
+
+    }
+    anTao()
+    function canNang(){
+        human.eat();
+        document.getElementById("2").innerHTML=human.weight;
+    }
+    canNang()
+</script>
+</body>
+</html>
